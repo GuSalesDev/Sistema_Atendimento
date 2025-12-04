@@ -77,6 +77,35 @@ public class AtendimentoService {
         System.out.println("Número de atendimentos na fila: " + filaAtendimento.tamanhoFila());
     }
 
+    public void iniciar() {
+    while (true) {
+        System.out.println("\n=== MENU ===");
+        System.out.println("1 - Registrar pessoa");
+        System.out.println("2 - Listar pessoas");
+        System.out.println("3 - Agendar atendimento");
+        System.out.println("4 - Atender próximo");
+        System.out.println("5 - Ver tamanho da fila");
+        System.out.println("0 - Sair");
+        System.out.print("Escolha: ");
+
+        String opcao = scanner.nextLine();
+
+        switch (opcao) {
+            case "1" -> registrarPessoa();
+            case "2" -> listarPessoas();
+            case "3" -> agendarAtendimento();
+            case "4" -> atenderProximo();
+            case "5" -> mostrarTamanhoFila();
+            case "0" -> {
+                System.out.println("Saindo...");
+                return;
+            }
+            default -> System.out.println("Opção inválida!");
+        }
+    }
+}
+
+
     
 
 

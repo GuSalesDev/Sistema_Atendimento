@@ -40,10 +40,10 @@ public class Atendimento {
 
     @Override
     public String toString() {
-        return "Atendimento{" +
-                "id=" + id +
-                ", pessoa=" + pessoa.getNome() +
-                ", dataHora=" + dataHora +
+        return "Atendimento, " +
+                "id: " + id +
+                ", pessoa: " + pessoa.getNome() +
+                ", data e hora; " + dataHora +
                 '}';
     }
 
