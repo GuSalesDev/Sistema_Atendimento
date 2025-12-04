@@ -6,11 +6,11 @@ build/
 # Arquivos de log
 *.log
 
-# Configurações do IntelliJ IDEA
+# Configurações do IntelliJ
 .idea/
 *.iml
 
-# Configurações do VSCode (caso use)
+# Configurações do VSCode
 .vscode/
 
 # Arquivos do Maven
