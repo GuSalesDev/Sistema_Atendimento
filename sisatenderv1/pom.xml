@@ -13,4 +13,12 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 
+
+  <dependencies>
+    <dependency>
+      <groupId>com.microsoft.azure.cognitiveservices</groupId>
+      <artifactId>azure-cognitiveservices-language</artifactId>
+      <version>0.0.1-beta</version>
+    </dependency>
+  </dependencies>
 </project>
