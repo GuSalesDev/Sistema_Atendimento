@@ -1,2 +1,35 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Garantir que scripts sejam tratados como texto
+*.sh text eol=lf
+
+# Normalizar arquivos para fim de linha LF no Git
+* text=auto eol=lf
+
+# Linguagens e formatos comuns
+*.java text
+*.xml text
+*.md text
+*.txt text
+*.yml text
+*.json text
+
+# Arquivos binários (não devem sofrer alteração de EOL)
+*.jar binary
+*.war binary
+*.ear binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+
+# Evitar quebra de arquivos ZIP dentro do projeto
+*.zip binary
+
+# Ignorar arquivos do IntelliJ como binários
+*.iml text
+
+# Melhorar diff para arquivos específicos
+*.md diff=markdown
+*.java diff=java
+
