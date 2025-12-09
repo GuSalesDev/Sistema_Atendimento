@@ -1,6 +1,7 @@
 package com.sisatender;
-
 import com.sisatender.service.*;
+import exception.*;
+
 
 public class MenuController {
 
@@ -8,9 +9,10 @@ public class MenuController {
     private final PersonService personService = new PersonService();
     private final AtendimentoService atendimentoService = new AtendimentoService();
 
-    public void iniciar() {
+ public void iniciar() {
 
-        while (true) {
+    while (true) {
+        try {
             System.out.println("\n1 - Registrar pessoa");
             System.out.println("2 - Agendar atendimento");
             System.out.println("3 - Atender próximo");
@@ -27,8 +29,13 @@ public class MenuController {
                 case 0 -> { return; }
                 default -> System.out.println("Opção inválida.");
             }
+
+        } catch (AtendimentoException e) {
+
+            System.out.println("\nErro: " + e.getMessage());
         }
     }
+}
 
     private void registrarPessoa() {
         String nome = input.nextLine("Nome: ");
